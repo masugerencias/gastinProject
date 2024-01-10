@@ -1,0 +1,13 @@
+[
+  {
+    "_id": 1,
+    "type": "expense",
+    "amount": 565,
+    "paymentType": "cash",
+    "name": "shoes",
+    "categoryId": 2,
+    "categoryName": "clothes",
+    "date": "01/01/2024"
+  }
+]
+
