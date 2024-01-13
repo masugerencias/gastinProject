@@ -1,16 +1,16 @@
 <template>
 <div>
 {{data}}
-  <InitialLoadingCircle></InitialLoadingCircle>
+  <HomeCard></HomeCard>
 </div>
 </template>
 
 <script>
 import transactions from "../api/trasnactions.json"
-import InitialLoadingCircle from "../components/InitialLoadingCircle"
+import HomeCard from "../components/HomeCard"
 export default {
   name: "Home",
-  components: { InitialLoadingCircle },
+  components: { HomeCard },
   data () {
     return {
       data : transactions
