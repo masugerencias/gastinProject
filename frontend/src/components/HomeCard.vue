@@ -12,7 +12,7 @@
             {{ data[0].monthDate }}
           </div>
           <v-list-item-title class="text-h5 mb-1">
-            SPENT:     {{data[0].totalSpent}}
+            SPENT: {{data[0].totalSpent}}
           </v-list-item-title>
           <v-list-item-subtitle>Budget: {{data[0].budgetToSpend}} </v-list-item-subtitle>
           <v-list-item-subtitle> Still available: {{availableMonthAmount}} </v-list-item-subtitle>
