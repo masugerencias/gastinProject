@@ -30,7 +30,7 @@
             rounded
             text
         >
-          Buttonnnn
+          Buttonn
         </v-btn>
       </v-card-actions>
     </v-card>
