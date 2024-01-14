@@ -4,8 +4,6 @@
         max-width="344"
         outlined
     >
-
-
       <v-list-item three-line>
         <v-list-item-content>
           <div class="text-overline mb-4">
@@ -35,6 +33,13 @@
         </v-btn>
       </v-card-actions>
     </v-card>
+    <v-divider></v-divider>
+      <v-data-table
+          :headers="headers"
+          :items="desserts"
+          :items-per-page="5"
+          class="elevation-1"
+      ></v-data-table>
   </template>
 
 <script>
