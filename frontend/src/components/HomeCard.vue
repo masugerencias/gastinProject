@@ -1,4 +1,5 @@
   <template>
+    <div>
     <v-card
         class="mx-auto"
         max-width="344"
@@ -34,12 +35,17 @@
       </v-card-actions>
     </v-card>
     <v-divider></v-divider>
-      <v-data-table
-          :headers="headers"
-          :items="desserts"
-          :items-per-page="5"
-          class="elevation-1"
-      ></v-data-table>
+      <template>
+        <v-data-table
+            :headers="headers"
+            :items="categories"
+            :items-per-page="5"
+            class="elevation-1"
+            mobile-breakpoint="0"
+        ></v-data-table>
+      </template>
+
+    </div>
   </template>
 
 <script>
@@ -50,6 +56,50 @@ export default {
   data () {
     return {
       data : transactions,
+      headers: [
+        { text: 'Category', value: 'name' },
+        { text: 'Spent', value: 'spent' },
+        { text: 'Budget', value: 'budget' },
+        { text: 'Available', value: 'availableToSpend' },
+      ],
+      categories: [
+        {
+          name: 'pet',
+          spent: 150,
+          budget: 200,
+          availableToSpend: 50,
+        },
+        {
+          name: 'home',
+          spent: 300,
+          budget: 600,
+          availableToSpend: 300,
+        },
+        {
+          name: 'car',
+          spent: 300,
+          budget: 600,
+          availableToSpend: 300,
+        },
+        {
+          name: 'supermarket',
+          spent: 300,
+          budget: 600,
+          availableToSpend: 300,
+        },
+        {
+          name: 'restaurants',
+          spent: 300,
+          budget: 600,
+          availableToSpend: 300,
+        },
+        {
+          name: 'bitches',
+          spent: 300,
+          budget: 600,
+          availableToSpend: 300,
+        },
+      ],
     }
     },
   computed: {
