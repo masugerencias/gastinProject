@@ -15,7 +15,7 @@
             SPENT:     {{data[0].totalSpent}}
           </v-list-item-title>
           <v-list-item-subtitle>Butget: {{data[0].budgetToSpend}} </v-list-item-subtitle>
-          <v-list-item-subtitle> Still available: </v-list-item-subtitle>
+          <v-list-item-subtitle> Still available: {{availableMonthAmount}} </v-list-item-subtitle>
         </v-list-item-content>
 
         <v-list-item-avatar
@@ -45,7 +45,11 @@ export default {
   data () {
     return {
       data : transactions,
-      availableMonthAmount: 0
+    }
+    },
+  computed: {
+    availableMonthAmount () {
+      return (this.data[0].budgetToSpend) - (this.data[0].totalSpent)
     }
   }
 }
