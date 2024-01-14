@@ -1,5 +1,6 @@
 <template>
 <v-card>
+  {{ data }}
   <v-container fluid>
     <v-row dense>
       <v-col
@@ -27,10 +28,6 @@
             <v-btn icon>
               <v-icon>mdi-bookmark</v-icon>
             </v-btn>
-
-            <v-btn icon>
-              <v-icon>mdi-share-variant</v-icon>
-            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -40,11 +37,13 @@
 </template>
 
 <script>
+import transactions from "../api/trasnactions.json"
 export default {
   name: "CategoryManager",
   data: () => ({
+    data : transactions,
     cards: [
-      { title: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 3 },
+      { title: 'Pet', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 3 },
       { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 3 },
       { title: 'Best airlines', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 3 },
       { title: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 3 },
