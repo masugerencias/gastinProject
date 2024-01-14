@@ -30,20 +30,37 @@
             rounded
             text
         >
-          Buttonn
+          Gain
+        </v-btn>
+        <v-btn
+            outlined
+            rounded
+            text
+        >
+          Expense
         </v-btn>
       </v-card-actions>
     </v-card>
-    <v-divider></v-divider>
-      <template>
+
+      <v-card
+      class="pt-2">
         <v-data-table
             :headers="headers"
             :items="categories"
             :items-per-page="5"
-            class="elevation-1"
+            class="elevation-1 pt-2"
             mobile-breakpoint="0"
+
         ></v-data-table>
-      </template>
+      </v-card>
+<div class="centered-button">
+  <v-btn>
+    See Categories
+  </v-btn>
+
+</div>
+
+
 
     </div>
   </template>
@@ -111,5 +128,12 @@ export default {
 </script>
 
 <style scoped>
+.centered-button {
+  padding: 2em 2em;
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
 </style>
