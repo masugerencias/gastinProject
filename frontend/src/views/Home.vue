@@ -1,16 +1,15 @@
 <template>
 <div>
-{{data}}
-  <HomeCard></HomeCard>
+  <CategoryManager></CategoryManager>
 </div>
 </template>
 
 <script>
 import transactions from "../api/trasnactions.json"
-import HomeCard from "../components/HomeCard"
+import CategoryManager from "../components/CategoryManager"
 export default {
   name: "Home",
-  components: { HomeCard },
+  components: {  CategoryManager },
   data () {
     return {
       data : transactions
