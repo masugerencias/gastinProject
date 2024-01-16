@@ -1,14 +1,16 @@
 <template>
 <div>
-  <h3>este es HOME VIEW</h3>
 {{data}}
+  <HomeCard></HomeCard>
 </div>
 </template>
 
 <script>
 import transactions from "../api/trasnactions.json"
+import HomeCard from "../components/HomeCard"
 export default {
   name: "Home",
+  components: { HomeCard },
   data () {
     return {
       data : transactions
