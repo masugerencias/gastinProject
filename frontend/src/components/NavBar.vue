@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar
-      color="deep-purple accent-4"
+      color="green"
       dense
       dark
     >
@@ -9,6 +9,7 @@
       <v-btn
         icon
         @click="goBack"
+        :disabled="homeRoute"
       >
         <v-icon>mdi-arrow-left-bold</v-icon>
       </v-btn>
@@ -16,6 +17,7 @@
       <v-btn
         icon
         @click="goHome"
+        :disabled="homeRoute"
       >
         <v-icon>mdi-home</v-icon>
       </v-btn>
@@ -44,6 +46,7 @@ export default {
       this.homeRoute = true;
       console.log(this.homeRoute);
       console.log(this.homeRoute);
+      this.homeRoute = true
 
     }
   },
@@ -51,11 +54,14 @@ export default {
     goHome() {
       if (this.$route.name!== "home") {
         this.$router.push({ name: "home" });
+        this.homeRoute = false
+
       }
     },
     goBack() {
       if (this.$route.name!== "home") {
         this.$router.go(-1);
+        this.homeRoute = false
       }
     },
   },
