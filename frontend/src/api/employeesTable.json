@@ -1,0 +1,43 @@
+[
+    {
+      "nombre": "Ana",
+      "apellido": "Martínez",
+      "edad": 34,
+      "ciudad": "Madrid",
+      "raza": "Caucásica",
+      "sexo": "Femenino"
+    },
+    {
+      "nombre": "Carlos",
+      "apellido": "García",
+      "edad": 28,
+      "ciudad": "Barcelona",
+      "raza": "Hispano",
+      "sexo": "Masculino"
+    },
+    {
+      "nombre": "Elena",
+      "apellido": "Fernández",
+      "edad": 45,
+      "ciudad": "Valencia",
+      "raza": "Mediterránea",
+      "sexo": "Femenino"
+    },
+    {
+      "nombre": "Miguel",
+      "apellido": "López",
+      "edad": 38,
+      "ciudad": "Sevilla",
+      "raza": "Hispano",
+      "sexo": "Masculino"
+    },
+    {
+      "nombre": "Sofía",
+      "apellido": "González",
+      "edad": 29,
+      "ciudad": "Málaga",
+      "raza": "Caucásica",
+      "sexo": "Femenino"
+    }
+  ]
+  

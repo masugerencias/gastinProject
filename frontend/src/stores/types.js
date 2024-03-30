@@ -1,0 +1,4 @@
+//export const SET_COACHINGS = 'SET_COACHINGS';
+
+
+export const SET_EMPLOYEES = 'SET_EMPLOYEES';

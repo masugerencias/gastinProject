@@ -4,6 +4,9 @@
   :title="title"></NavBar>
   <h1>HOME VIEW</h1>
   <HomeCard></HomeCard>
+  <v-btn
+  @click="traerEmpleados"
+  >load employees</v-btn>
 </div>
 </template>
 
@@ -11,6 +14,9 @@
 import HomeCard from "@/components/HomeCard.vue"
 import transactions from "../api/trasnactions.json"
 import NavBar from "../components/NavBar"
+import { mapActions,  } from 'vuex';
+
+
 export default {
   name: "Home",
   components: { NavBar, HomeCard},
@@ -19,6 +25,14 @@ export default {
       data : transactions,
       title:'Home'
     }
+  },
+  methods: {
+    ...mapActions(['loadEmployees']),
+    
+    traerEmpleados(){
+      this.loadEmployees()
+    }
+    
   }
 }
 
