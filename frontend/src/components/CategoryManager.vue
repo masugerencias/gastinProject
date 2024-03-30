@@ -1,6 +1,5 @@
 <template>
 <v-card>
-  {{ data }}
   <v-container fluid>
     <v-row dense>
       <v-col
