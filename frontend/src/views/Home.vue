@@ -1,6 +1,8 @@
 <template>
 <div>
-  <h1>estamos en el home´</h1>
+  <NavBar
+  :title="title"></NavBar>
+  <h1>HOME VIEW</h1>
   <CategoryManager></CategoryManager>
   <BottomNavigationBar></BottomNavigationBar>
 </div>
@@ -10,12 +12,14 @@
 import transactions from "../api/trasnactions.json"
 import CategoryManager from "../components/CategoryManager"
 import BottomNavigationBar from "../components/BottomNavigationBar"
+import NavBar from "../components/NavBar"
 export default {
   name: "Home",
-  components: {  CategoryManager, BottomNavigationBar},
+  components: {  CategoryManager, BottomNavigationBar, NavBar},
   data () {
     return {
-      data : transactions
+      data : transactions,
+      title:'Inicio'
     }
   }
 }

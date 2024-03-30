@@ -1,6 +1,6 @@
 <template>
 <v-card>
-  {{ data }}
+  <h3> CATEGORY MANAGER COMPONENT</h3>
   <v-container fluid>
     <v-row dense>
       <v-col

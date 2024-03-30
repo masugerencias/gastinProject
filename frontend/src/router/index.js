@@ -18,7 +18,6 @@ const routes = [
   },
 ];
 
-// Y aquí, cambia la inicialización del router a la forma de Vue 2:
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
