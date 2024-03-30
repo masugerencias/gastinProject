@@ -1,6 +1,7 @@
 <template>
   <div>
-<NavBar></NavBar>
+<NavBar
+:title="'FirstPage'"></NavBar>
 
 <h1>FIRST PAGE</h1>
 

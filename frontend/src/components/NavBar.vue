@@ -1,10 +1,11 @@
 <template>
   <div>
     <v-app-bar
-      color="green"
+      color="white-smock"
       dense
       dark
     >
+    <div class="leftSideNavBar">
 
       <v-btn
         icon
@@ -23,6 +24,21 @@
       </v-btn>
 
       <v-toolbar-title>{{ title }}</v-toolbar-title>
+    </div>
+
+
+      <div class="rightIconNavbar">
+        <v-btn
+        icon
+        @click="goToSettings"
+    
+      >
+        <v-icon>mdi-multiplication</v-icon>
+      </v-btn>
+
+
+      </div>
+     
     </v-app-bar>
   </div>
 </template>
@@ -44,8 +60,6 @@ export default {
   created() {
     if (this.$route.name === "home") {
       this.homeRoute = true;
-      console.log(this.homeRoute);
-      console.log(this.homeRoute);
       this.homeRoute = true
 
     }
@@ -64,6 +78,27 @@ export default {
         this.homeRoute = false
       }
     },
+    goToSettings() {
+        this.$router.push({ name: "settings" })
+    },
   },
 };
 </script>
+<style scoped>
+
+
+
+.rightIconNavbar {
+display: flex;
+background-color: red;
+
+}
+
+.leftSideNavBar {
+  display: flex;
+  background-color: green;
+  align-items: center;
+}
+
+
+</style>

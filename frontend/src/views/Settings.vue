@@ -2,22 +2,20 @@
 <div>
   <NavBar
   :title="title"></NavBar>
-  <h1>HOME VIEW</h1>
-  <BottomNavigationBar></BottomNavigationBar>
+  <h1>SETTINGS view</h1>
 </div>
 </template>
 
 <script>
 import transactions from "../api/trasnactions.json"
-import BottomNavigationBar from "../components/BottomNavigationBar"
 import NavBar from "../components/NavBar"
 export default {
-  name: "Home",
-  components: { BottomNavigationBar, NavBar},
+  name: "Settings",
+  components: { NavBar },
   data () {
     return {
       data : transactions,
-      title:'Inicio'
+      title:'settings'
     }
   }
 }
