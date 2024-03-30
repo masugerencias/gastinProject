@@ -1,23 +1,8 @@
 <template>
-  <v-footer class="bg-grey-lighten-1">
-    <v-row justify="center" no-gutters>
-      <RouterLink
-          v-for="link in links"
-          :key="link"
-       to="firstPage">
-
-        <v-btn
-            class="mx-2"
-            color="white"
-            variant="text"
-        >
-          {{ link }}
-        </v-btn>
-      </RouterLink>
-
-
-    </v-row>
-  </v-footer>
+  <div>
+ <p>Enlace para ir al first page via url <router-link to="/first-page">first-page</router-link></p>
+    <p>Enlace para ir al first page via router name <router-link :to="{ name: 'first-page'}">first-page</router-link></p> 
+  </div>
 </template>
 <script>
 export default {

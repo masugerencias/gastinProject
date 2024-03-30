@@ -1,4 +1,8 @@
 <template>
+  <v-main>
+        <router-view />
+    </v-main>
+
 <!--  <v-app>-->
 <!--    <v-app-bar-->
 <!--      app-->
@@ -41,7 +45,6 @@
 
 <!--    </v-main>-->
 <!--  </v-app>-->
-  <router-view />
 </template>
 
 <script>
