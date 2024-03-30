@@ -2,24 +2,23 @@
 <div>
   <NavBar
   :title="title"></NavBar>
-  <h1>HOME VIEW</h1>
-  <HomeCard></HomeCard>
+  <h1>CategoryDetail view</h1>
 </div>
 </template>
 
 <script>
-import HomeCard from "@/components/HomeCard.vue"
 import transactions from "../api/trasnactions.json"
 import NavBar from "../components/NavBar"
 export default {
-  name: "Home",
-  components: { NavBar, HomeCard},
+  name: "CategoryDetail",
+  components: { NavBar },
   data () {
     return {
       data : transactions,
-      title:'Home'
+      title:'settings',
     }
-  }
+  }, 
+
 }
 
 

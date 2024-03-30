@@ -54,7 +54,8 @@
         ></v-data-table>
       </v-card>
 <div class="centered-button">
-  <v-btn>
+  <v-btn
+  @click="goToCategoryManager">
     See Categories
   </v-btn>
 
@@ -123,6 +124,13 @@ export default {
     availableMonthAmount () {
       return (this.data[0].budgetToSpend) - (this.data[0].totalSpent)
     }
+  },
+  methods: {
+    goToCategoryManager(){
+      this.$router.push({ name: "categoryManager" });
+    }
+  
+  
   }
 }
 </script>

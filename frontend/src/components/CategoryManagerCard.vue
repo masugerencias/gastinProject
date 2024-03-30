@@ -39,7 +39,7 @@
 <script>
 import transactions from "../api/trasnactions.json"
 export default {
-  name: "CategoryManager",
+  name: "CategoryManagerCard",
   data: () => ({
     data : transactions,
     cards: [

@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import FirstPage from '../views/FirstPage.vue';
 import Settings from '@/views/Settings.vue';
+import CategoryManager from '@/views/CategoryManager.vue';
+
 
 Vue.use(VueRouter);
 
@@ -21,6 +23,11 @@ const routes = [
     path: '/firstPage',
     name: 'firstPage',
     component: FirstPage
+  },
+  {
+    path: '/categoryManager',
+    name: 'categoryManager',
+    component: CategoryManager
   },
 ];
 

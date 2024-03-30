@@ -15,9 +15,10 @@ export default {
   data () {
     return {
       data : transactions,
-      title:'settings'
+      title:'settings',
     }
-  }
+  }, 
+
 }
 
 

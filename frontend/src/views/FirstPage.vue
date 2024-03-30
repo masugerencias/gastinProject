@@ -13,9 +13,7 @@ import NavBar from "../components/NavBar"
 export default {
   name: "FirstPage",
   components: {  NavBar },
-  created () {
-    console.log('hitory', this.$router)
-  }
+ 
 }
 </script>
 

@@ -5,8 +5,7 @@
       dense
       dark
     >
-    <div class="leftSideNavBar">
-
+<div class="container">
       <v-btn
         icon
         @click="goBack"
@@ -24,21 +23,20 @@
       </v-btn>
 
       <v-toolbar-title>{{ title }}</v-toolbar-title>
-    </div>
+      <v-spacer></v-spacer>
 
-
-      <div class="rightIconNavbar">
+<div class="right">
         <v-btn
+        :disabled="settingsRoute"
         icon
         @click="goToSettings"
     
       >
-        <v-icon>mdi-multiplication</v-icon>
+        <v-icon>mdi-adjust</v-icon>
       </v-btn>
 
-
-      </div>
-     
+    </div>
+  </div>
     </v-app-bar>
   </div>
 </template>
@@ -55,21 +53,28 @@ export default {
   data() {
     return {
       homeRoute: undefined,
+      settingsRoute: undefined,
     };
   },
   created() {
-    if (this.$route.name === "home") {
-      this.homeRoute = true;
-      this.homeRoute = true
 
-    }
+    switch(this.$route.name) {
+  case 'home':
+  this.homeRoute = true;    
+    break;
+  case 'settings':
+this.settingsRoute = true;    
+
+    break;
+  default:
+}
+
   },
   methods: {
     goHome() {
       if (this.$route.name!== "home") {
         this.$router.push({ name: "home" });
         this.homeRoute = false
-
       }
     },
     goBack() {
@@ -85,20 +90,17 @@ export default {
 };
 </script>
 <style scoped>
-
-
-
-.rightIconNavbar {
-display: flex;
-background-color: red;
-
-}
-
-.leftSideNavBar {
+.right{
   display: flex;
-  background-color: green;
+  flex-direction: row-reverse;
+  ;
+}
+.container{
+  width: 100%;
+  display: flex;
   align-items: center;
 }
+
 
 
 </style>
